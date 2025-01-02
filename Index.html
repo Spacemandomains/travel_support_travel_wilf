@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Travel Wilf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .container h1 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            color: #0077cc;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .stripe-button {
+            margin-top: 20px;
+        }
+
+        .stripe-button button {
+            background-color: #6772e5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .stripe-button button:hover {
+            background-color: #5469d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>The Travel Wilf</h1>
+        <p>Support our adventures with your payment. Thank you for helping us explore the world!</p>
+
+        <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+<stripe-buy-button
+  buy-button-id="buy_btn_1Qcvz2IjlqeMQmrhWFjmzczb"
+  publishable-key="pk_live_51QWk8MIjlqeMQmrhHSMaeZvxT89kYuUoKeYs2kTI4VABuP0CDCtuUK7jKL6RUmDI9udrb3pspEIVCotcSDQ3SN0M00wWOqscZj"
+>
+</stripe-buy-button>
+    </div>
+</body>
+</html>
