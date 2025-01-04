@@ -18,22 +18,30 @@
         }
 
         .container {
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             background: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             padding: 20px;
             width: 90%;
-            max-width: 400px;
+            max-width: 800px;
         }
 
-        .container h1 {
+        .payment-section {
+            text-align: center;
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .payment-section h1 {
             margin: 0 0 10px;
             font-size: 24px;
             color: #0077cc;
         }
 
-        .container p {
+        .payment-section p {
             font-size: 16px;
             color: #666;
         }
@@ -55,22 +63,67 @@
         .stripe-button button:hover {
             background-color: #5469d4;
         }
+
+        .subscriber-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .subscriber-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #000000;
+        }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tile {
+            background-color: #FFD700;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>The Travel Wilf</h1>
-        <p>Support our adventures with your payment. Thank you for helping us explore the world!</p>
+        <div class="payment-section">
+            <h1>The Travel Wilf</h1>
+            <p>Support our adventures with your payment. Thank you for helping us explore the world!</p>
 
-        <script async
+            <script async
   src="https://js.stripe.com/v3/buy-button.js">
 </script>
 
 <stripe-buy-button
   buy-button-id="buy_btn_1Qcvz2IjlqeMQmrhWFjmzczb"
-  publishable-key="pk_live_51QWk8MIjlqeMQmrhHSMaeZvxT89kYuUoKeYs2kTI4VABuP0CDCtuUK7jKL6RUmDI9udrb3pspEIVCotcSDQ3SN0M00wWOqscZj"
->
+  publishable-key="pk_live_51QWk8MIjlqeMQmrhHSMaeZvxT89kYuUoKeYs2kTI4VABuP0CDCtuUK7jKL6RUmDI9udrb3pspEIVCotcSDQ3SN0M00wWOqscZj">
 </stripe-buy-button>
+        </div>
+
+        <div class="subscriber-section">
+            <h2>Subscribers Of The Year 2025</h2>
+            <div class="tiles">
+                <div class="tile">Kevin</div>
+                <div class="tile">Zoe</div>
+                <div class="tile">Pooh</div>
+                <!-- <div class="tile">Sophia</div>
+                <div class="tile">Noah</div>
+                <div class="tile">Olivia</div>
+                <div class="tile">James</div>
+                <div class="tile">Ava</div>
+                <div class="tile">William</div>
+                <div class="tile">Mia</div> -->
+            </div>
+        </div>
     </div>
 </body>
 </html>
